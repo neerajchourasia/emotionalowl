@@ -1,0 +1,41 @@
+
+".container" : {
+	backgroundColor: "transparent",
+	actiactivity: "hide",
+	theme: "Theme.AppCompat.Translucent.NoTitleBar",
+	//backgroundImage: '/images/happiness_tree_background.jpg',
+	height: Titanium.UI.FILL,
+	width: Titanium.UI.FILL,
+	orientationModes:[Titanium.UI.PORTRAIT]
+},
+
+"#shareYourThoughtsText": {
+	width: Titanium.UI.FILL,
+	height: "60%",
+	top: "0",
+	backgroundColor: "#000000" ,
+	borderWidth: "1",
+	borderColor: "#83abfc",
+	color: "#FFFFFF",
+	opacity: '0.5',
+	font: {
+		fontSize: '22dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'normal'
+	}
+},
+
+"#growYourTree": {
+	width: Titanium.UI.FILL,
+	height: "20%",
+	top: "10",
+	backgroundColor: "#535456",
+	borderWidth: "1",
+	borderColor: "#83abfc",
+	color: "#FFFFFF",
+	font: {
+		fontSize: '28dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'bold'
+	}
+}

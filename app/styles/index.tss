@@ -1,0 +1,194 @@
+".container" : {
+	backgroundColor: "transparent",
+	actiactivity: "hide",
+	theme: "Theme.AppCompat.Translucent.NoTitleBar",
+	backgroundImage: '/images/happiness_tree_background.jpg',
+	height: Titanium.UI.FILL,
+	width: Titanium.UI.FILL,
+	orientationModes:[Titanium.UI.PORTRAIT]
+}
+
+"#sunForgroundOverLayView[formFactor=tablet]": {
+	height: '310',
+	width: '310',
+	backgroundColor: 'transparent',
+	top: "-5%",
+	left: "2%",
+	visible: false,
+	zIndex: '99999',
+}
+
+"#sunForgroundOverLayView[formFactor=handheld]": {
+	height: '155',
+	width: '155',
+	backgroundColor: 'transparent',
+	top: "-5%",
+	left: "2%",
+	visible: false,
+	zIndex: '99999',
+}
+
+"#sunForgroundOverLayView[platform=android formFactor=tablet]": {
+	height: '240',
+	width: '340',
+	backgroundColor: 'transparent',
+	top: "2%",
+	left: "2%",
+	visible: false,
+	zIndex: '99999'
+}
+
+"#sunForgroundOverLayView[platform=android formFactor=handheld]": {
+	height: '120',
+	width: '170',
+	backgroundColor: 'transparent',
+	top: "2%",
+	left: "2%",
+	visible: false,
+	zIndex: '99999',
+}
+
+"#sunForgroundProgressView[formFactor=tablet]": {
+	height: "125",
+	width: "125",
+	borderRadius: "65",
+	//backgroundImage: '/images/happiness_tree_sun_popup.png',
+	bottom: "0%",
+	left: "30%",
+	borderWidth: '0',
+	borderColor: 'transparent'
+}
+
+"#sunForgroundProgressView[formFactor=handheld]": {
+	height: "70",
+	width: "70",
+	borderRadius: "65",
+	//backgroundImage: '/images/happiness_tree_sun_popup.png',
+	bottom: "0%",
+	left: "30%",
+	borderWidth: '0',
+	borderColor: 'transparent'
+}
+
+"#cloudForgroundOverLayView[formFactor=tablet]": {
+	height: '240',
+	width: '310',
+	backgroundColor: 'transparent',
+	top: "0%",
+	right: "0%",
+	visible: false,
+	zIndex: '99999'
+}
+
+"#cloudForgroundOverLayView[formFactor=handheld]": {
+	height: '120',
+	width: '155',
+	backgroundColor: 'transparent',
+	top: "0%",
+	right: "0%",
+	visible: false,
+	zIndex: '99999'
+}
+
+"#cloudForgroundOverLayView[platform=android formFactor=tablet]": {
+	height: '240',
+	width: '340',
+	backgroundColor: 'transparent',
+	top: "0%",
+	right: "0%",
+	visible: false,
+	zIndex: '99999'
+}
+
+"#cloudForgroundOverLayView[platform=android formFactor=handheld]": {
+	height: '120',
+	width: '170',
+	backgroundColor: 'transparent',
+	top: "0%",
+	right: "0%",
+	visible: false,
+	zIndex: '99999'
+}
+
+"#cloudForgroundProgressView[formFactor=tablet]": {
+	height: "125",
+	width: "125",
+	borderRadius: "65",
+	backgroundColor: "transparent",
+	bottom: "0%",
+	left: "30%",
+	borderWidth: '0',
+	borderColor: 'transparent',
+	//backgroundImage: '/images/happiness_tree_cloud.png'
+}
+
+"#cloudForgroundProgressView[formFactor=handheld]": {
+	height: "70",
+	width: "70",
+	borderRadius: "65",
+	backgroundColor: "transparent",
+	bottom: "0%",
+	left: "30%",
+	borderWidth: '0',
+	borderColor: 'transparent',
+	//backgroundImage: '/images/happiness_tree_cloud.png'
+}
+
+"#owlForgroundOverLayView[formFactor=tablet]": {
+	height: '240',
+	width: '310',
+	backgroundColor: 'transparent', //''
+	bottom: "20%",
+	left: "25%",
+	visible: false
+}
+
+"#owlForgroundOverLayView[formFactor=handheld]": {
+	height: '120',
+	width: '155',
+	backgroundColor: 'transparent', //''
+	bottom: "20%",
+	left: "35%",
+	visible: false
+}
+
+"#owlForgroundOverLayView[platform=android formFactor=tablet]": {
+	height: '240',
+	width: '340',
+	backgroundColor: 'transparent', //''
+	bottom: "20%",
+	left: "25%",
+	visible: false
+}
+
+"#owlForgroundOverLayView[platform=android formFactor=handheld]": {
+	height: '120',
+	width: '170',
+	backgroundColor: 'transparent', //''
+	bottom: "20%",
+	left: "25%",
+	visible: false
+}
+
+"#owlForgroundProgressView[formFactor=tablet]": {
+	height: "125",
+	width: "125",
+	borderRadius: "65",
+	backgroundColor: "transparent",
+	bottom: "0%",
+	left: "30%",
+	//borderColor: 'yellow',
+	borderWidth: '0'
+}
+
+"#owlForgroundProgressView[formFactor=handheld]": {
+	height: "70",
+	width: "70",
+	borderRadius: "65",
+	backgroundColor: "transparent",
+	bottom: "0%",
+	left: "30%",
+	//borderColor: 'yellow',
+	borderWidth: '0'
+}
+

@@ -1,0 +1,51 @@
+".container" : {
+	backgroundColor: "transparent",
+	actiactivity: "hide",
+	theme: "Theme.AppCompat.Translucent.NoTitleBar",
+	//backgroundImage: '/images/happiness_tree_background.jpg',
+	height: Titanium.UI.FILL,
+	width: Titanium.UI.FILL,
+	navBarHidden: true,
+	orientationModes:[Titanium.UI.PORTRAIT]
+}
+
+"#popupTextAreaView": {
+	//width: Titanium.UI.FILL,
+	backgroundColor: "#000000" ,
+	borderWidth: "1",
+	borderColor: "#83abfc",
+	color: "#FFFFFF",
+	opacity: '0.5',
+	font: {
+		fontSize: '14dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'normal'
+	},
+	borderRadius: '0',
+	editable: false,
+	scrollable: true,
+	padding: '5'
+},
+
+"#dataTime": {
+	//width: Titanium.UI.FILL,
+	backgroundColor: "#000000" ,
+	borderWidth: "1",
+	borderColor: "#83abfc",
+	color: "#FFFFFF",
+	opacity: '0.5',
+	font: {
+		fontSize: '14dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'bold'
+	},
+	borderRadius: '0',
+}
+
+"#dataTime[formFactor=handheld]": {
+	font: {
+		fontSize: '10dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'bold'
+	}
+}

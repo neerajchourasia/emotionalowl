@@ -1,0 +1,72 @@
+<Alloy>
+	<Window class="container">
+		<ImageView id="happiness_tree_sun" image="/images/happiness_tree_sun.png" height="310" width="310" top="2%" left="2%" zIndex="99999" formFactor="tablet" ></ImageView>
+		<ImageView id="happiness_tree_sun" image="/images/happiness_tree_sun.png" height="155" width="155" top="2%" left="2%" zIndex="99999" formFactor="handheld" ></ImageView>
+		
+		<View id="sunForgroundOverLayView">
+			
+			<View id="sunForgroundProgressView"></View>
+			
+			<ImageView id="happiness_text_icon" borderRadius="40" visible="false" image="/images/happiness_text_icon.png" height="80" width="80" left="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="happiness_text_icon" borderRadius="25" visible="false"  image="/images/happiness_text_icon.png" height="40" width="40" left="3" bottom="13" formFactor="handheld"></ImageView>
+			<ImageView id="happiness_image_icon" borderRadius="40" visible="false"  image="/images/happiness_image_icon.png" height="80" width="80" left="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="happiness_image_icon" borderRadius="25" visible="false"  image="/images/happiness_image_icon.png" height="40" width="40" left="16" bottom="58" formFactor="handheld"></ImageView>
+			<ImageView id="happiness_voice_icon" borderRadius="40" visible="false" image="/images/happiness_voice_icon.png" height="80" width="80" left="117" bottom="150" formFactor="tablet"></ImageView>
+			<ImageView id="happiness_voice_icon" borderRadius="25" visible="false" image="/images/happiness_voice_icon.png" height="40" width="40" left="65" bottom="75" formFactor="handheld"></ImageView>
+			<ImageView id="happiness_video_icon" borderRadius="40" visible="false" image="/images/happiness_video_icon.png" height="80" width="80" right="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="happiness_video_icon" borderRadius="25" visible="false" image="/images/happiness_video_icon.png" height="40" width="40" right="16" bottom="58" formFactor="handheld"></ImageView>
+			<!--ImageView id="happiness_share_icon" borderRadius="40" visible="false" image="/images/icon8.png" height="80" width="80" right="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="happiness_share_icon" borderRadius="25" visible="false" image="/images/icon8.png" height="40" width="40" right="3" bottom="13" formFactor="handheld"></ImageView-->
+		</View>
+		
+		
+		
+		<ImageView id="happiness_tree_cloud" image="/images/happiness_tree_cloud.png" height="20%" width="50%" top="2%" right="-2%" zIndex="99999"></ImageView>
+		
+		<View id="cloudForgroundOverLayView">
+
+			<View id="cloudForgroundProgressView"></View>
+
+			<ImageView id="icon11" borderRadius="40" visible="false"  image="/images/cl_happiness_cloud_icon.png" height="80" width="80" left="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="icon11" borderRadius="25" visible="false"  image="/images/cl_happiness_cloud_icon.png" height="40" width="40" left="3" bottom="13" formFactor="handheld"></ImageView>
+			<ImageView id="icon12" borderRadius="40" visible="false"  image="/images/cl_happiness_image_icon.png" height="80" width="80" left="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="icon12" borderRadius="25" visible="false"  image="/images/cl_happiness_image_icon.png" height="40" width="40" left="16" bottom="58" formFactor="handheld"></ImageView>
+			<ImageView id="icon14" borderRadius="40" visible="false"  image="/images/cl_happiness_mail_icon.png" height="80" width="80" left="117" bottom="150" formFactor="tablet"></ImageView>
+			<ImageView id="icon14" borderRadius="25" visible="false"  image="/images/cl_happiness_mail_icon.png" height="40" width="40" left="65" bottom="75" formFactor="handheld"></ImageView>
+			<!--ImageView id="icon16" borderRadius="40" visible="false"  image="/images/cicon7.png" height="80" width="80" right="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="icon16" borderRadius="25" visible="false"  image="/images/cicon7.png" height="40" width="40" right="16" bottom="58" formFactor="handheld"></ImageView>
+			<ImageView id="icon17" borderRadius="40" visible="false"  image="/images/cicon8.png" height="80" width="80" right="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="icon17" borderRadius="25" visible="false"  image="/images/cicon8.png" height="40" width="40" right="3" bottom="13" formFactor="handheld"></ImageView-->
+		</View>
+
+
+
+		<ImageView image="/images/happiness_tree_grown.png" formFactor="tablet" height="80%" width="Titanium.UI.FILL" bottom="2%"></ImageView>
+		<ImageView image="/images/happiness_tree_grown.png" formFactor="handheld" height="80%" width="Titanium.UI.FILL" bottom="2%"></ImageView>
+
+
+		
+		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_1.png" formFactor="tablet" height="130dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl"></ImageView>
+		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_1.png" formFactor="handheld" height="65dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl"></ImageView>
+
+		<View id="owlForgroundOverLayView" >
+			
+			<View id="owlForgroundProgressView"></View>
+			
+			<ImageView id="icon20" borderRadius="40" visible="false"  image="/images/ow_happiness_gativity_icon.png" height="80" width="80" left="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="icon20" borderRadius="25" visible="false"  image="/images/ow_happiness_gativity_icon.png" height="40" width="40" left="3" bottom="13" formFactor="handheld"></ImageView>
+			<ImageView id="icon21" borderRadius="40" visible="false"  image="/images/ow_happiness_play_icon.png" height="80" width="80" left="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="icon21" borderRadius="25" visible="false"  image="/images/ow_happiness_play_icon.png" height="40" width="40" left="16" bottom="58" formFactor="handheld"></ImageView>
+			<ImageView id="icon23" borderRadius="40" visible="false"  image="/images/ow_happiness_relex_icon.png" height="80" width="80" left="117" bottom="150" formFactor="tablet"></ImageView>
+			<ImageView id="icon23" borderRadius="25" visible="false"  image="/images/ow_happiness_relex_icon.png" height="40" width="40" left="65" bottom="75" formFactor="handheld"></ImageView>
+			<ImageView id="icon25" borderRadius="40" visible="false"  image="/images/ow_happiness_support_icon.png" height="80" width="80" right="30" bottom="115" formFactor="tablet"></ImageView>
+			<ImageView id="icon25" borderRadius="25" visible="false"  image="/images/ow_happiness_support_icon.png" height="40" width="40" right="16" bottom="58" formFactor="handheld"></ImageView>
+			<ImageView id="icon26" borderRadius="40" visible="false"  image="/images/ow_happiness_trash_icon.png" height="80" width="80" right="5" bottom="25" formFactor="tablet"></ImageView>
+			<ImageView id="icon26" borderRadius="25" visible="false"  image="/images/ow_happiness_trash_icon.png" height="40" width="40" right="3" bottom="13" formFactor="handheld"></ImageView>
+		</View>
+
+
+		
+		<ImageView image="/images/happiness_tree_footer.png" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" bottom="0"></ImageView>
+	</Window>
+</Alloy>

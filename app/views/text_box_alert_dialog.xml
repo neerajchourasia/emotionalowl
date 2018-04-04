@@ -1,0 +1,8 @@
+<Alloy>
+	<Window  class="container">
+		<View layout="vertical" left="10%" right="10%" top="20%" bottom="40%">
+			<TextArea id="shareYourThoughtsText" ></TextArea>
+			<Button id="growYourTree">Save Happy Moment</Button>
+		</View>
+	</Window>
+</Alloy>

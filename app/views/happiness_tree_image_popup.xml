@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<View id="popupImageViewContainer" top="30%" left="40%" right="40%" layout="vertical" height="Titanium.UI.SIZE">
+			<Label id="dataTime" width="Titanium.UI.SIZE"></Label>
+			<ImageView id="popupImageView" width="Titanium.UI.FILL" height="Titanium.UI.SIZE" borderRadius="10"></ImageView>
+		</View> 
+	</Window>
+</Alloy>
