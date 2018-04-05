@@ -1,80 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-	<id>com.navistar.dvirdev</id>
-	<name>emotionalowl</name>
-	<version>1.0</version>
-	<publisher>unni</publisher>
-	<url>undefined</url>
-	<description>undefined</description>
-	<copyright>2018 by unni</copyright>
-	<icon>appicon.png</icon>
-	<fullscreen>false</fullscreen>
-	<navbar-hidden>false</navbar-hidden>
-	<analytics>true</analytics>
-	<guid>9b20be8b-b29f-4c9d-9444-bf0aaaa094c0</guid>
-	<property name="ti.ui.defaultunit" type="string">dp</property>
-	<property name="run-on-main-thread" type="bool">true</property>
-	<ios>
-		<enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
-		<use-app-thinning>true</use-app-thinning>
-		<plist>
-			<dict>
-				<key>UISupportedInterfaceOrientations~iphone</key>
-				<array>
-					<string>UIInterfaceOrientationPortrait</string>
-				</array>
-				<key>UISupportedInterfaceOrientations~ipad</key>
-				<array>
-					<string>UIInterfaceOrientationPortrait</string>
-					<string>UIInterfaceOrientationPortraitUpsideDown</string>
-					<string>UIInterfaceOrientationLandscapeLeft</string>
-					<string>UIInterfaceOrientationLandscapeRight</string>
-				</array>
-				<key>UIRequiresPersistentWiFi</key>
-				<false/>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-				<key>UIStatusBarHidden</key>
-				<false/>
-				<key>UIStatusBarStyle</key>
-				<string>UIStatusBarStyleDefault</string>
-			</dict>
-		</plist>
-	</ios>
-	<android xmlns:android="http://schemas.android.com/apk/res/android">
-		<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.navistar.dvirdev" android:versionCode="1" android:versionName="1.0">
-			<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23"/>
-			<application android:icon="@drawable/appicon" android:label="emotionalowl" android:name="EmotionalowlApplication" android:debuggable="false" android:theme="@style/Theme.AppCompat">
-				<activity android:name=".EmotionalowlActivity" android:label="@string/app_name" android:theme="@style/Theme.Titanium" android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout">
-					<intent-filter>
-						<action android:name="android.intent.action.MAIN"/>
-						<category android:name="android.intent.category.LAUNCHER"/>
-					</intent-filter>
-				</activity>
-				<activity android:name="org.appcelerator.titanium.TiActivity" android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout"/>
-				<activity android:name="org.appcelerator.titanium.TiTranslucentActivity" android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout" android:theme="@style/Theme.Titanium.Translucent"/>
-				<activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" android:configChanges="screenSize"/>
-				<provider android:name="org.appcelerator.titanium.io.TiFileProvider" android:authorities="com.navistar.dvirdev.tifileprovider" android:exported="false" android:grantUriPermissions="true"/>
-				<service android:name="com.appcelerator.aps.APSAnalyticsService" android:exported="false"/>
-			</application>
-			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-			<uses-permission android:name="android.permission.INTERNET"/>
-			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-			<uses-permission android:name="android.permission.VIBRATE"/>
-		</manifest>
-	</android>
-	<modules/>
-	<deployment-targets>
-		<target device="mobileweb">false</target>
-		<target device="android">true</target>
-		<target device="ipad">true</target>
-		<target device="iphone">true</target>
-	</deployment-targets>
-	<sdk-version>7.0.1.GA</sdk-version>
-	<plugins>
-		<plugin version="1.0">ti.alloy</plugin>
-	</plugins>
-	<property name="appc-app-id" type="string">5abdce0ed120fe20c0087ac2</property>
+    <id>com.navistar.dvirdev</id>
+    <name>emotionalowl</name>
+    <version>1.0.4</version>
+    <publisher>Neeraj</publisher>
+    <url>https://demo.happiness.tree.com</url>
+    <description>This is just a demo app for checking functional implementation of Titanium API.</description>
+    <copyright>2018 by Neeraj</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>9b20be8b-b29f-4c9d-9444-bf0aaaa094c0</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="run-on-main-thread" type="bool">true</property>
+    <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+        <use-app-thinning>true</use-app-thinning>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:versionCode="1" android:versionName="1.0"
+            package="com.navistar.dvirdev" xmlns:android="http://schemas.android.com/apk/res/android">
+            <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23"/>
+            <application android:debuggable="false"
+                android:icon="@drawable/appicon"
+                android:label="emotionalowl"
+                android:name="EmotionalowlApplication" android:theme="@style/Theme.AppCompat">
+                <activity
+                    android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout"
+                    android:label="@string/app_name"
+                    android:name=".EmotionalowlActivity" android:theme="@style/Theme.Titanium">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                    </intent-filter>
+                </activity>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout" android:name="org.appcelerator.titanium.TiActivity"/>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|fontScale|screenSize|smallestScreenSize|screenLayout"
+                    android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@style/Theme.Titanium.Translucent"/>
+                <activity android:configChanges="screenSize" android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
+                <provider
+                    android:authorities="com.navistar.dvirdev.tifileprovider"
+                    android:exported="false"
+                    android:grantUriPermissions="true" android:name="org.appcelerator.titanium.io.TiFileProvider"/>
+                <service android:exported="false" android:name="com.appcelerator.aps.APSAnalyticsService"/>
+            </application>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.VIBRATE"/>
+        </manifest>
+    </android>
+    <modules/>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+    </deployment-targets>
+    <sdk-version>7.0.1.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+    <property name="appc-app-id" type="string">5abdce0ed120fe20c0087ac2</property>
 </ti:app>

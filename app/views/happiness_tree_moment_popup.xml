@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Label id="dataTime"></Label>
+		<TextArea id="popup_text_area_view"></TextArea>
+	</Window>
+</Alloy>

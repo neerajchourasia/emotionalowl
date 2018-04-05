@@ -1,8 +1,0 @@
-<Alloy>
-	<Window class="container">
-		<View id="happiness_tree_text_area_container" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" layout="vertical" backgroundColor="transparent">
-			<Label id="dataTime" ></Label>
-			<TextArea id="popupTextAreaView" ></TextArea> 
-		</View>
-	</Window>
-</Alloy>

@@ -12,8 +12,8 @@
 	height: '310',
 	width: '310',
 	backgroundColor: 'transparent',
-	top: "-5%",
-	left: "2%",
+	top: "0",
+	left: "0",
 	visible: false,
 	zIndex: '99999',
 }
@@ -22,28 +22,28 @@
 	height: '155',
 	width: '155',
 	backgroundColor: 'transparent',
-	top: "-5%",
+	top: "0",
 	left: "2%",
 	visible: false,
 	zIndex: '99999',
 }
 
 "#sunForgroundOverLayView[platform=android formFactor=tablet]": {
-	height: '240',
-	width: '340',
+	height: '310',
+	width: '310',
 	backgroundColor: 'transparent',
-	top: "2%",
-	left: "2%",
+	top: "0",
+	left: "0",
 	visible: false,
 	zIndex: '99999'
 }
 
 "#sunForgroundOverLayView[platform=android formFactor=handheld]": {
-	height: '120',
-	width: '170',
+	height: '155',
+	width: '155',
 	backgroundColor: 'transparent',
-	top: "2%",
-	left: "2%",
+	top: "0",
+	left: "0",
 	visible: false,
 	zIndex: '99999',
 }
@@ -71,41 +71,41 @@
 }
 
 "#cloudForgroundOverLayView[formFactor=tablet]": {
-	height: '240',
+	height: '310',
 	width: '310',
 	backgroundColor: 'transparent',
 	top: "0%",
-	right: "0%",
+	right: "6%",
 	visible: false,
 	zIndex: '99999'
 }
 
 "#cloudForgroundOverLayView[formFactor=handheld]": {
-	height: '120',
+	height: '155',
 	width: '155',
 	backgroundColor: 'transparent',
 	top: "0%",
-	right: "0%",
+	right: "6%",
 	visible: false,
 	zIndex: '99999'
 }
 
 "#cloudForgroundOverLayView[platform=android formFactor=tablet]": {
-	height: '240',
-	width: '340',
+	height: '310',
+	width: '310',
 	backgroundColor: 'transparent',
 	top: "0%",
-	right: "0%",
+	right: "6%",
 	visible: false,
 	zIndex: '99999'
 }
 
 "#cloudForgroundOverLayView[platform=android formFactor=handheld]": {
-	height: '120',
-	width: '170',
+	height: '155',
+	width: '155',
 	backgroundColor: 'transparent',
 	top: "0%",
-	right: "0%",
+	right: "6%",
 	visible: false,
 	zIndex: '99999'
 }
@@ -135,37 +135,37 @@
 }
 
 "#owlForgroundOverLayView[formFactor=tablet]": {
-	height: '240',
+	height: '310',
 	width: '310',
 	backgroundColor: 'transparent', //''
-	bottom: "20%",
+	bottom: "15%",
 	left: "25%",
 	visible: false
 }
 
 "#owlForgroundOverLayView[formFactor=handheld]": {
-	height: '120',
+	height: '155',
 	width: '155',
 	backgroundColor: 'transparent', //''
-	bottom: "20%",
+	bottom: "15%",
 	left: "35%",
 	visible: false
 }
 
 "#owlForgroundOverLayView[platform=android formFactor=tablet]": {
-	height: '240',
-	width: '340',
+	height: '310',
+	width: '310',
 	backgroundColor: 'transparent', //''
-	bottom: "20%",
+	bottom: "15%",
 	left: "25%",
 	visible: false
 }
 
 "#owlForgroundOverLayView[platform=android formFactor=handheld]": {
-	height: '120',
-	width: '170',
+	height: '155',
+	width: '155',
 	backgroundColor: 'transparent', //''
-	bottom: "20%",
+	bottom: "15%",
 	left: "25%",
 	visible: false
 }

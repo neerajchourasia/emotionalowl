@@ -16,6 +16,12 @@ function hideOwl() {
 	visibleImagesInIntervalForOWL(false);
 }
 
+$.index.addEventListener('click', function() {
+	hideSun();
+	hideCloud();
+	hideOwl();
+});
+
 /*******************************************************************************/
 
 /**
@@ -28,7 +34,7 @@ $.happiness_tree_sun.addEventListener('click', function() {
 	hideOwl();
 
 	var matrix = Ti.UI.create2DMatrix();
-	matrix = matrix.rotate(90);
+	//matrix = matrix.rotate(90);
 	matrix = matrix.scale(1.25, 1.25);
 	var a = Ti.UI.createAnimation({
 		transform : matrix,
@@ -117,15 +123,15 @@ var saveEmotionTextAndGrowTree = function(happinessTreeData) {
 
 	fruitImage.addEventListener('click', function(e) {
 		
-		alert(e.source.dataTime + ':: ' + e.source.emotionText);
+		//alert(e.source.dataTime + ':: ' + e.source.emotionText);
 		console.log('<<<<e>>>> ' + JSON.stringify(e));
-		/*var hapiness_tree_text_popup = Alloy.createController('happiness_tree_message_popup', {
+		var hapiness_tree_text_popup = Alloy.createController('happiness_tree_moment_popup', {
 			source : e.source
 		}).getView();
 
 		hapiness_tree_text_popup.open({
 			activityEnterAnimation : (Ti.Platform.osname == "android") ? Ti.App.Android.R.anim.accelerate_decelerate_interpolator : Ti.UI.iOS.AnimationStyle.CURL_UP
-		});*/
+		});
 	});
 
 	$.index.add(fruitImage);
@@ -229,18 +235,6 @@ $.happiness_tree_cloud.addEventListener('click', function(e) {
 
 	hideSun();
 	hideOwl();
-
-	var matrix = Ti.UI.create2DMatrix();
-	//matrix = matrix.rotate(180);
-	matrix = matrix.scale(1.25, 1.25);
-	var a = Ti.UI.createAnimation({
-		transform : matrix,
-		duration : 1000,
-		autoreverse : true,
-		repeat : 1
-	});
-	$.happiness_tree_cloud.animate(a);
-
 	$.cloudForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForCLOUD(true);
 });
@@ -294,6 +288,30 @@ function visibleImagesInIntervalForCLOUD(visibleFlag) {
 	}
 }
 
+this.cloud_movement = null;
+this.cloud_movement = setInterval(function() {
+
+	var matrix = Ti.UI.create2DMatrix();
+	//matrix = matrix.rotate(180);
+	matrix = matrix.scale(1.25, 1.25);
+	var a = Ti.UI.createAnimation({
+		transform : matrix,
+		duration : 1000,
+		autoreverse : true,
+		repeat : 1
+	});
+	$.happiness_tree_cloud.animate(a);
+
+	/*var t1 = Ti.UI.create2DMatrix();
+	t1 = t1.translate(-300, 0);
+	var a1 = Ti.UI.createAnimation({
+		transform : t1,
+		duration : 2000,
+		autoreverse : true,
+		repeat : 1
+	}); 
+	$.happiness_tree_cloud.animate(a1);*/
+}, 10000);
 /*******************************************************************************/
 
 $.happiness_tree_owl.addEventListener('click', function(e) {
@@ -373,6 +391,7 @@ this.owl_blink = setInterval(function() {
 
 $.index.addEventListener('close', function() {
 	clearInterval(this.owl_blink);
+	clearInterval(this.cloud_movement = null);
 });
 
 function _formatDate() {
@@ -397,7 +416,9 @@ function _formatDate() {
 	currentDayAlp = days[currentDayNum];
 
 	//return currentDateFormat = currentDayAlp + '-' + currentMonthAlp + '-' + currentDate + '-' + currentFullYear;
-	return currentDateFormat = currentDayAlp + ' ' + currentMonthAlp + ' ' + currentDate + ', ' + currentFullYear;
+	return currentDateFormat = ' ' + currentDayAlp + ' ' + currentMonthAlp + ' ' + currentDate + ', ' + currentFullYear + ' ';
 }
 
 $.index.open();
+
+//var hapiness_tree_text_popup = Alloy.createController('fortesting').getView();
