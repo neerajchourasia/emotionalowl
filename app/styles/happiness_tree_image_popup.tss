@@ -20,11 +20,3 @@
 	},
 	borderRadius: '0',
 }
-
-"#dataTime[formFactor=handheld]": {
-	font: {
-		fontSize: '10dp',
-		fontFamily: 'Myriad Pro',
-		fontWeight: 'bold'
-	}
-}

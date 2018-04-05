@@ -23,14 +23,6 @@
 	width: Titanium.UI.SIZE
 },
 
-"#dataTime[formFactor=handheld]": {
-	font: {
-		fontSize: '10dp',
-		fontFamily: 'Myriad Pro',
-		fontWeight: 'bold'
-	}
-},
-
 "#popup_text_area_view": {
 	backgroundColor: "#000000" ,
 	borderWidth: "1",

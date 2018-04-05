@@ -37,8 +37,8 @@
 		<ImageView image="/images/happiness_tree_grown.png" formFactor="tablet" height="80%" width="Titanium.UI.FILL" bottom="2%"></ImageView>
 		<ImageView image="/images/happiness_tree_grown.png" formFactor="handheld" height="80%" width="Titanium.UI.FILL" bottom="2%"></ImageView>
 		
-		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_1.png" formFactor="tablet" height="130dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl" bubbleParent="false"></ImageView>
-		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_1.png" formFactor="handheld" height="65dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl" bubbleParent="false"></ImageView>
+		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_2.png" formFactor="tablet" height="130dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl" bubbleParent="false"></ImageView>
+		<ImageView id="happiness_tree_owl" image="/images/happiness_tree_owl_2.png" formFactor="handheld" height="65dp" width="Titanium.UI.SIZE" bottom="20%" left="38%" id="happiness_tree_owl" bubbleParent="false"></ImageView>
 
 		<View id="owlForgroundOverLayView">
 			
@@ -56,6 +56,13 @@
 			<ImageView id="icon26" borderRadius="25" visible="false"  image="/images/ow_happiness_trash_icon.png" height="50" width="50" right="-7" bottom="42" formFactor="handheld"></ImageView>
 		</View>
 		
-		<ImageView image="/images/happiness_tree_footer.png" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" bottom="0"></ImageView>
+		<ImageView image="/images/dinosur.png" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" bottom="5" left="-10" height="100" width="Titanium.UI.SIZE" id="animal_animation" formFactor="tablet"></ImageView>
+		<ImageView image="/images/dinosur.png" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" bottom="5" left="-10" height="70" width="Titanium.UI.SIZE" id="animal_animation" formFactor="handheld"></ImageView>
+		
+		<ImageView image="/images/happiness_tree_footer.png" height="Titanium.UI.SIZE" width="Titanium.UI.SIZE" bottom="0" zIndex="99999"></ImageView>
+		
+		<View right="0" bottom="0" height="100" width="100" id="touch_tourtle_view" zIndex="99999" formFactor="tablet"></View>
+		<View right="0" bottom="0" height="50" width="50" id="touch_tourtle_view" zIndex="99999" formFactor="handheld"></View>
+		
 	</Window>
 </Alloy>

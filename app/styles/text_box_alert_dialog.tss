@@ -25,6 +25,14 @@
 	}
 },
 
+"#shareYourThoughtsText[formFactor=handheld]": {
+	font: {
+		fontSize: '10dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'normal'
+	}
+},
+
 "#growYourTree": {
 	width: Titanium.UI.FILL,
 	height: "20%",
@@ -35,6 +43,14 @@
 	color: "#FFFFFF",
 	font: {
 		fontSize: '28dp',
+		fontFamily: 'Myriad Pro',
+		fontWeight: 'bold'
+	}
+}
+
+"#growYourTree[formFactor=handheld]": {
+	font: {
+		fontSize: '14dp',
 		fontFamily: 'Myriad Pro',
 		fontWeight: 'bold'
 	}

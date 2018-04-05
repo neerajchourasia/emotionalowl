@@ -29,13 +29,12 @@ $.index.addEventListener('click', function() {
  **/
 $.happiness_tree_sun.addEventListener('click', function() {
 
-	Titanium.Media.vibrate([0, 500, 100]);
 	hideCloud();
 	hideOwl();
 
 	var matrix = Ti.UI.create2DMatrix();
-	//matrix = matrix.rotate(90);
-	matrix = matrix.scale(1.25, 1.25);
+	matrix = matrix.rotate(90);
+	//matrix = matrix.scale(1.25, 1.25);
 	var a = Ti.UI.createAnimation({
 		transform : matrix,
 		duration : 1000,
@@ -47,6 +46,21 @@ $.happiness_tree_sun.addEventListener('click', function() {
 	$.sunForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForSUN(true, 5);
 });
+
+this.sun_movement = null;
+this.sun_movement = setInterval(function() {
+
+	var matrix = Ti.UI.create2DMatrix();
+	matrix = matrix.scale(1.25, 1.25);
+	var a = Ti.UI.createAnimation({
+		transform : matrix,
+		duration : 1000,
+		autoreverse : true,
+		repeat : 1
+	});
+	$.happiness_tree_sun.animate(a);
+}, 7000);
+
 
 /**
  * Following listener to disappear animated images around SUN.
@@ -301,16 +315,6 @@ this.cloud_movement = setInterval(function() {
 		repeat : 1
 	});
 	$.happiness_tree_cloud.animate(a);
-
-	/*var t1 = Ti.UI.create2DMatrix();
-	t1 = t1.translate(-300, 0);
-	var a1 = Ti.UI.createAnimation({
-		transform : t1,
-		duration : 2000,
-		autoreverse : true,
-		repeat : 1
-	}); 
-	$.happiness_tree_cloud.animate(a1);*/
 }, 10000);
 /*******************************************************************************/
 
@@ -319,6 +323,7 @@ $.happiness_tree_owl.addEventListener('click', function(e) {
 	hideSun();
 	hideCloud();
 
+	$.happiness_tree_owl.setImage('/images/happiness_tree_owl_1.png');
 	$.owlForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForOWL(true);
 });
@@ -379,7 +384,7 @@ this.owl_blink = setInterval(function() {
 
 	this.owl_open_eye = setInterval(function() {
 
-		$.happiness_tree_owl.setImage('/images/happiness_tree_owl_1.png');
+		$.happiness_tree_owl.setImage('/images/happiness_tree_owl_2.png');
 		clearInterval(this.owl_open_eye);
 		this.owl_open_eye = null;
 
@@ -391,7 +396,8 @@ this.owl_blink = setInterval(function() {
 
 $.index.addEventListener('close', function() {
 	clearInterval(this.owl_blink);
-	clearInterval(this.cloud_movement = null);
+	clearInterval(this.cloud_movement);
+	clearInterval(this.sun_movement);
 });
 
 function _formatDate() {
@@ -418,6 +424,40 @@ function _formatDate() {
 	//return currentDateFormat = currentDayAlp + '-' + currentMonthAlp + '-' + currentDate + '-' + currentFullYear;
 	return currentDateFormat = ' ' + currentDayAlp + ' ' + currentMonthAlp + ' ' + currentDate + ', ' + currentFullYear + ' ';
 }
+
+var callAgain = 0;
+$.touch_tourtle_view.addEventListener('click', function() {
+	if (callAgain == 0) {
+
+		Titanium.Media.vibrate([0, 500, 100]);
+		
+		var matrix = Ti.UI.create2DMatrix();
+		matrix = matrix.translate(175, 0);
+		var a1 = Ti.UI.createAnimation({
+			transform : matrix,
+			duration : 5000,
+			autoreverse : false,
+			repeat : 1
+		});
+		$.animal_animation.animate(a1);
+		callAgain = 1;
+
+	} else {
+		
+		Titanium.Media.vibrate([0, 500, 100]);
+		
+		var matrix = Ti.UI.create2DMatrix();
+		matrix = matrix.translate(-175, 0);
+		var a1 = Ti.UI.createAnimation({
+			transform : matrix,
+			duration : 4000,
+			autoreverse : false,
+			repeat : 1
+		});
+		$.animal_animation.animate(a1);
+		callAgain = 0;
+	}
+});
 
 $.index.open();
 
