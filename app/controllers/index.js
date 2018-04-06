@@ -498,7 +498,7 @@ function open_close_slider_menu() {
 		if (Alloy.isHandheld) {
 			matrix = matrix.translate(860, 0);
 		} else {
-			matrix = matrix.translate(-460, 0);
+			matrix = matrix.translate(460, 0);
 		}
 		
 		var a1 = Ti.UI.createAnimation({
@@ -509,7 +509,7 @@ function open_close_slider_menu() {
 		});
 		$.slider_menu_view.animate(a1);
 		
-		//$.slider_menu_view.setLeft(0);
+		$.slider_menu_view.setLeft(0);
 		
 		isMenuOpen = 1;
 	
@@ -525,7 +525,7 @@ function open_close_slider_menu() {
 	
 		$.slider_menu_view.animate(a1);
 	
-		//$.slider_menu_view.setLeft('-40%');
+		$.slider_menu_view.setLeft('-60%');
 	
 		isMenuOpen = 0;
 	}
