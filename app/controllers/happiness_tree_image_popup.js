@@ -18,7 +18,7 @@ var matrix = Ti.UI.create2DMatrix();
 matrix = matrix.scale(3, 3);
 var a = Ti.UI.createAnimation({
 	transform : matrix,
-	duration : 2000,
+	duration : 1000,
 	autoreverse : false,
 	repeat : 1
 });

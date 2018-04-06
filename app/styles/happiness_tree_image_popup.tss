@@ -14,7 +14,7 @@
 	color: "#FFFFFF",
 	opacity: '0.5',
 	font: {
-		fontSize: '10dp',
+		fontSize: '7dp',
 		fontFamily: 'Myriad Pro',
 		fontWeight: 'bold'
 	},

@@ -27,7 +27,7 @@
 
 "#shareYourThoughtsText[formFactor=handheld]": {
 	font: {
-		fontSize: '10dp',
+		fontSize: '14dp',
 		fontFamily: 'Myriad Pro',
 		fontWeight: 'normal'
 	}
@@ -45,7 +45,9 @@
 		fontSize: '28dp',
 		fontFamily: 'Myriad Pro',
 		fontWeight: 'bold'
-	}
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	title: '記錄開心時刻'
 }
 
 "#growYourTree[formFactor=handheld]": {

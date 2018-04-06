@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.navistar.dvirdev</id>
+    <id>com.ust.htdemo</id>
     <name>emotionalowl</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <publisher>Neeraj</publisher>
     <url>https://demo.happiness.tree.com</url>
     <description>This is just a demo app for checking functional implementation of Titanium API.</description>
@@ -44,6 +44,14 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="1" android:versionName="1.0"
             package="com.navistar.dvirdev" xmlns:android="http://schemas.android.com/apk/res/android">
+            <Extensions>
+                <Extension Category="windows.backgroundTasks"
+                    EntryPoint="TitaniumWindows_Media.AudioBackground" Executable="$targetnametoken$.exe">
+                    <BackgroundTasks>
+                        <Task Type="audio"/>
+                    </BackgroundTasks>
+                </Extension>
+            </Extensions>
             <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23"/>
             <application android:debuggable="false"
                 android:icon="@drawable/appicon"
@@ -76,6 +84,8 @@
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.VIBRATE"/>
+            <permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         </manifest>
     </android>
     <modules/>

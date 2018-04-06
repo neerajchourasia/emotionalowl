@@ -1,26 +1,29 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
+/**
+ * Hiding sun's circle icons.
+ **/
 function hideSun() {
 	$.sunForgroundOverLayView.setVisible(false);
 	visibleImagesInIntervalForSUN(false, 0);
 }
 
+/**
+ * Hiding cloud's circle icons.
+ **/
 function hideCloud() {
 	$.cloudForgroundOverLayView.setVisible(false);
 	visibleImagesInIntervalForCLOUD(false);
 }
 
+/**
+ * Hiding owl's circle icons.
+ **/
 function hideOwl() {
 	$.owlForgroundOverLayView.setVisible(false);
 	visibleImagesInIntervalForOWL(false);
 }
-
-$.index.addEventListener('click', function() {
-	hideSun();
-	hideCloud();
-	hideOwl();
-});
 
 /*******************************************************************************/
 
@@ -32,21 +35,27 @@ $.happiness_tree_sun.addEventListener('click', function() {
 	hideCloud();
 	hideOwl();
 
-	var matrix = Ti.UI.create2DMatrix();
+	/**
+	 * Animation for rotating sun
+	 **/
+	/*var matrix = Ti.UI.create2DMatrix();
 	matrix = matrix.rotate(90);
-	//matrix = matrix.scale(1.25, 1.25);
 	var a = Ti.UI.createAnimation({
 		transform : matrix,
 		duration : 1000,
 		autoreverse : true,
 		repeat : 1
 	});
-	$.happiness_tree_sun.animate(a);
+	$.happiness_tree_sun.animate(a);*/
 
 	$.sunForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForSUN(true, 5);
 });
 
+/**
+ * Applying animation for sun in certain interval.
+ * Animation for popping up. 
+ **/
 this.sun_movement = null;
 this.sun_movement = setInterval(function() {
 
@@ -96,8 +105,6 @@ function visibleImagesInIntervalForSUN(visibleFlag, countNum) {
 
 					$.happiness_video_icon.setVisible(true);
 				} else {
-
-					//$.happiness_share_icon.setVisible(true);
 				}
 			} else {
 				clearInterval(this.timer1);
@@ -110,8 +117,10 @@ function visibleImagesInIntervalForSUN(visibleFlag, countNum) {
 		$.happiness_image_icon.setVisible(false);
 		$.happiness_voice_icon.setVisible(false);
 		$.happiness_video_icon.setVisible(false);
-		//$.happiness_share_icon.setVisible(false);
 
+		/**
+		 * Clearing interval event listener for sun around the circle icon. 
+		 **/
 		clearInterval(this.timer1);
 		this.timer1 = null;
 	}
@@ -137,7 +146,6 @@ var saveEmotionTextAndGrowTree = function(happinessTreeData) {
 
 	fruitImage.addEventListener('click', function(e) {
 		
-		//alert(e.source.dataTime + ':: ' + e.source.emotionText);
 		console.log('<<<<e>>>> ' + JSON.stringify(e));
 		var hapiness_tree_text_popup = Alloy.createController('happiness_tree_moment_popup', {
 			source : e.source
@@ -196,9 +204,6 @@ function openGallery() {
 					hapiness_tree_image_popup.open({
 						activityEnterAnimation : (Ti.Platform.osname == "android") ? Ti.App.Android.R.anim.accelerate_decelerate_interpolator : Ti.UI.iOS.AnimationStyle.CURL_UP
 					});
-
-
-					//alert(e.source.emotionText);
 				});
 				$.index.add(fruitImage);
 
@@ -249,6 +254,17 @@ $.happiness_tree_cloud.addEventListener('click', function(e) {
 
 	hideSun();
 	hideOwl();
+
+	/*var matrix = Ti.UI.create2DMatrix();
+	matrix = matrix.scale(1.25, 1.25);
+	var a = Ti.UI.createAnimation({
+		transform : matrix,
+		duration : 500,
+		autoreverse : true,
+		repeat : 1
+	});
+	$.happiness_tree_cloud.animate(a);*/
+	
 	$.cloudForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForCLOUD(true);
 });
@@ -304,18 +320,19 @@ function visibleImagesInIntervalForCLOUD(visibleFlag) {
 
 this.cloud_movement = null;
 this.cloud_movement = setInterval(function() {
-
 	var matrix = Ti.UI.create2DMatrix();
 	//matrix = matrix.rotate(180);
-	matrix = matrix.scale(1.25, 1.25);
+	matrix = matrix.translate(20, 0);
+	//matrix = matrix.scale(1.25, 1.25);
 	var a = Ti.UI.createAnimation({
 		transform : matrix,
-		duration : 1000,
+		duration : 500,
 		autoreverse : true,
 		repeat : 1
 	});
 	$.happiness_tree_cloud.animate(a);
-}, 10000);
+}, 2000);
+
 /*******************************************************************************/
 
 $.happiness_tree_owl.addEventListener('click', function(e) {
@@ -323,7 +340,7 @@ $.happiness_tree_owl.addEventListener('click', function(e) {
 	hideSun();
 	hideCloud();
 
-	$.happiness_tree_owl.setImage('/images/happiness_tree_owl_1.png');
+	//$.happiness_tree_owl.setImage('/images/happiness_tree_owl_1.png');
 	$.owlForgroundOverLayView.setVisible(true);
 	visibleImagesInIntervalForOWL(true);
 });
@@ -348,7 +365,7 @@ function visibleImagesInIntervalForOWL(visibleFlag) {
 					$.icon20.setVisible(true);
 				} else if (i == 2) {
 
-					$.icon21.setVisible(true);
+					$.owl_audio_clip_play.setVisible(true);
 				} else if (i == 3) {
 
 					$.icon23.setVisible(true);
@@ -367,7 +384,7 @@ function visibleImagesInIntervalForOWL(visibleFlag) {
 		}, 200);
 	} else {
 		$.icon20.setVisible(false);
-		$.icon21.setVisible(false);
+		$.owl_audio_clip_play.setVisible(false);
 		$.icon23.setVisible(false);
 		$.icon25.setVisible(false);
 		$.icon26.setVisible(false);
@@ -384,7 +401,7 @@ this.owl_blink = setInterval(function() {
 
 	this.owl_open_eye = setInterval(function() {
 
-		$.happiness_tree_owl.setImage('/images/happiness_tree_owl_2.png');
+		$.happiness_tree_owl.setImage('/images/happiness_tree_owl_1.png');
 		clearInterval(this.owl_open_eye);
 		this.owl_open_eye = null;
 
@@ -396,8 +413,11 @@ this.owl_blink = setInterval(function() {
 
 $.index.addEventListener('close', function() {
 	clearInterval(this.owl_blink);
+	this.owl_blink = null;
 	clearInterval(this.cloud_movement);
+	this.cloud_movement = null;
 	clearInterval(this.sun_movement);
+	this.sun_movement = null;
 });
 
 function _formatDate() {
@@ -432,10 +452,10 @@ $.touch_tourtle_view.addEventListener('click', function() {
 		Titanium.Media.vibrate([0, 500, 100]);
 		
 		var matrix = Ti.UI.create2DMatrix();
-		matrix = matrix.translate(175, 0);
+		matrix = matrix.translate(175, -75);
 		var a1 = Ti.UI.createAnimation({
 			transform : matrix,
-			duration : 5000,
+			duration : 4000,
 			autoreverse : false,
 			repeat : 1
 		});
@@ -447,7 +467,7 @@ $.touch_tourtle_view.addEventListener('click', function() {
 		Titanium.Media.vibrate([0, 500, 100]);
 		
 		var matrix = Ti.UI.create2DMatrix();
-		matrix = matrix.translate(-175, 0);
+		matrix = matrix.translate(-175, 50);
 		var a1 = Ti.UI.createAnimation({
 			transform : matrix,
 			duration : 4000,
@@ -456,6 +476,78 @@ $.touch_tourtle_view.addEventListener('click', function() {
 		});
 		$.animal_animation.animate(a1);
 		callAgain = 0;
+	}
+});
+
+/**
+ * Adding event listener in owl's play icon's click event
+ * Creating media player for playing audio.
+ **/
+$.owl_audio_clip_play.addEventListener('click', function() {
+	var sound = Titanium.Media.createSound({
+		url : '/images/Meditation_Exercise.mp3',
+		preload : true
+	});
+	sound.play();
+});
+
+var isMenuOpen = 0;
+function open_close_slider_menu() {
+	if (isMenuOpen == 0) {
+		var matrix = Ti.UI.create2DMatrix();
+		if (Alloy.isHandheld) {
+			matrix = matrix.translate(860, 0);
+		} else {
+			matrix = matrix.translate(-460, 0);
+		}
+		
+		var a1 = Ti.UI.createAnimation({
+			transform : matrix,
+			duration : 2000,
+			autoreverse : false,
+			repeat : 1
+		});
+		$.slider_menu_view.animate(a1);
+		
+		//$.slider_menu_view.setLeft(0);
+		
+		isMenuOpen = 1;
+	
+	} else {
+		var matrix = Ti.UI.create2DMatrix();
+		matrix = matrix.translate(0, 0);
+		var a1 = Ti.UI.createAnimation({
+			transform : matrix,
+			duration : 2000,
+			autoreverse : false,
+			repeat : 1
+		});
+	
+		$.slider_menu_view.animate(a1);
+	
+		//$.slider_menu_view.setLeft('-40%');
+	
+		isMenuOpen = 0;
+	}
+}
+
+$.slider_menu_icon.addEventListener('click', function() {
+	open_close_slider_menu();
+});
+
+$.slider_menu_view.addEventListener('click', function() {
+	open_close_slider_menu();
+});
+
+/**
+ * Event listener in window for hiding sun's or cloud's or owl's circle icon'  
+ **/
+$.index.addEventListener('click', function() {
+	hideSun();
+	hideCloud();
+	hideOwl();
+	if (isMenuOpen == 1) {
+		open_close_slider_menu();
 	}
 });
 
